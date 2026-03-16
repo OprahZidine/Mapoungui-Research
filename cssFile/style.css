@@ -1,0 +1,707 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* ===== HEADER ===== */
+#header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between; /* Logo left, nav right */
+    align-items: center;
+    padding: 15px 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== LOGO ===== */
+#header .Logo img {
+    width: 120px; /* Default size for desktop */
+    height: auto;
+}
+
+/* ===== NAVIGATION ===== */
+#navbar ul {
+    list-style: none;
+    display: flex; /* horizontal layout */
+    gap: 25px;    /* space between links */
+    margin: 0;
+    padding: 0;
+}
+
+#navbar li a {
+    position: relative; /* needed for underline effect */
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 6px 4px;
+    transition: color 0.3s ease;
+}
+
+/* Hover color change */
+#navbar li a:hover {
+    color: #088178;
+}
+
+/* Underline animation */
+#navbar li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background-color: #088178;
+    transition: width 0.3s ease;
+}
+
+#navbar li a:hover::after {
+    width: 100%;
+}
+/*home styling*/
+#home{
+    background-image: url(image/caleb-hernandez-belmonte-Wbdfy1HkLY8-unsplash.jpg);
+    background-size: cover;
+    height: 500px;
+      margin: auto;
+   
+    
+}
+
+#home h1 {
+    color: #088178;
+    padding-top: 270px;
+  
+
+}
+
+#home h4 {
+    color: #E3E6F3 ;
+    padding-top;: 10px 
+   
+
+}
+
+#home p {
+    color: #E3E6F3;
+    padding-top: 10px ;
+    
+    
+}
+
+/* Button */
+#home a {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #088178;
+    border: 0;
+    padding: 12px 40px;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: #e3e6f342;
+}
+
+
+
+/*about styling */
+
+ #about{
+     
+     padding: 60px 10%;
+ }
+
+ .about-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+ }
+
+ .about-text{
+    flex:1;
+ }
+
+  .about-text h1{
+    font-size: 2.5em;
+    font-weight: bolder;
+    color: palevioletred;
+       margin-bottom: 10px;
+
+ }
+
+
+ .about-text p{
+    font-size: 1rem;
+    line-height: 1.8em;
+    color:#333;
+    
+ }
+
+ .about-image {
+    flex: 1;
+    text-align: right;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+#myFeature {
+    padding: 60px 8%;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+/* Section heading */
+#service {
+    grid-column: 1 / -1;
+    font-size: 2.5rem;
+    color: palevioletred;
+    text-align: center;
+    margin-bottom: 10px;
+   
+    
+}
+
+/* Grid layout */
+#myFeature {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+/* Feature card */
+.feature-box {
+    background: #ffffff;
+    padding: 25px 20px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.feature-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Feature image */
+.feature-box img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Call-to-action */
+.feature-box h6 {
+    margin: 0;
+}
+
+.feature-box a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #088178;
+    background-color: #e3e6f342;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.feature-box a:hover {
+    background-color: #088178;
+    color: #ffffff;
+}
+
+
+/* ===== Affiliations Section ===== */
+#affiliation {
+    padding: 60px 8%;
+    background-color: #f9f9f9;
+}
+
+/* Heading */
+#affiliation h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: palevioletred;
+    margin-bottom: 10px;
+  
+}
+
+/* List container */
+#affiliation ul {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+/* List items */
+#affiliation ul li {
+    background: #ffffff;
+    margin-bottom: 15px;
+    padding: 18px 25px;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+}
+
+
+/* Contact section */
+#con-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 10%;
+    background-color: #f5f5f5;
+}
+
+/* Title */
+.title{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.title h1{
+    font-size: 2.5rem;
+    color: palevioletred;
+}
+
+/* Form container */
+.container{
+    flex: 1;
+    min-width: 300px;
+    max-width: 450px;
+}
+
+/* Form layout */
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input, textarea{
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Button */
+input[type="submit"]{
+    margin-top: 15px;
+    padding: 12px;
+    border: none;
+    background-color:  #088178;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover{
+    background-color: #088178;
+}
+
+/* Image section */
+.illustration{
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.illustration img{
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+
+#footer{
+    background-color:#ccc;
+    color:#444;
+    padding: 50px 10% 20px;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-col{
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-col h4{
+    margin-bottom: 15px;
+    font-size: 18px;
+    color:#444;
+}
+
+.footer-col ul{
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li{
+    margin-bottom: 10px;
+}
+
+.footer-col a{
+    text-decoration: none;
+    color:#444;
+    transition: color 0.3s;
+}
+
+.footer-col a:hover{
+    color:  #088178;
+}
+
+.footer-logo{
+    width: 140px;
+}
+
+.copyright{
+    text-align: center;
+    margin-top: 40px;
+    border-top: 1px solid #444;
+    padding-top: 15px;
+    font-size: 14px;
+    color:#444;
+}
+
+
+
+
+#term{
+    display: flex;
+    flex-direction: column;   /* makes everything stack vertically */
+    gap: 30px;                /* space between sections */
+    padding: 30px;
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+#term div{
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#term h1{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: palevioletred;
+}
+
+#term h4{
+    font-size: 20px;
+    margin-bottom: 10px;
+    color:#088178;
+}
+
+#term p{
+    color: #555;
+    line-height: 1.6;
+}
+
+#term ul{
+    padding-left: 20px;
+}
+
+#term li{
+    margin-bottom: 10px;
+    color: #444;
+}
+
+#term div:hover{
+    transform: translateY(-3px);
+    transition: 0.3s;
+}
+
+     
+.menu-toggle{
+     display: none;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+
+
+
+
+
+@media (max-width:768px){
+
+#navbar{
+    display:none;
+    width:100%;
+}
+
+#navbar ul{
+    flex-direction:column;
+    text-align:center;
+}
+
+#navbar ul li{
+    margin:15px 0;
+}
+
+.menu-toggle{
+    display:block;
+}
+
+.menu-toggle{
+    display:block;
+    position:fixed;
+    top:20px;
+    right:20px;
+    font-size:30px;
+    cursor:pointer;
+    z-index:1000;
+}
+}
+
+
+
+
+
+
+/* ===== RESPONSIVE STYLES ===== */
+@media (max-width: 1200px) {
+
+    /* Reduce logo size for smaller screens */
+    #header .Logo img {
+        width: 90px;
+    }
+
+    /* Reduce header padding */
+    #header {
+        padding: 10px 20px;
+    }
+
+    /* Stack nav vertically */
+    #navbar ul {
+        flex-direction: column; /* vertical links */
+        gap: 15px;
+        align-items: center;
+    }
+
+    /* Optional: reduce font size */
+    #navbar li a {
+        font-size: 14px;
+    }
+
+    /*home */
+#home h4 {
+        font-size: 1rem;
+        padding-bottom: 15px;
+    }
+
+    #home h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    #home p {
+        font-size: 0.95rem;
+        padding-bottom: 15px;
+    }
+
+    #home a {
+        font-size: 1rem;
+        padding: 12px 40px;
+        border-radius: 18px;
+    }
+    
+   /*aout */
+     .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image {
+        text-align: center;
+    }
+
+
+      #affiliation h1 {
+        font-size: 1.8rem;
+    }
+
+    .affiliation-list li {
+        padding: 15px 18px;
+        font-size: 0.95rem;
+    }
+
+
+
+     #service {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .feature-box {
+        padding: 20px 15px;
+    }
+
+    .feature-box img {
+        max-width: 120px;
+    }
+
+    .feature-box a {
+        width: 100%;
+   
+    }
+
+
+
+    @media (max-width: 768px){
+
+#con-content{
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 25px;
+}
+
+/* Title */
+.title h1{
+    font-size: 1.8rem;
+}
+
+/* Form container */
+.container{
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Inputs */
+input,
+textarea{
+    width: 100%;
+    font-size: 16px;
+}
+
+/* Button */
+input[type="submit"]{
+    width: 100%;
+    padding: 14px;
+}
+
+/* Image */
+.illustration{
+    width: 100%;
+}
+
+.illustration img{
+    max-width: 100%;
+}
+}
+
+
+@media (max-width:768px){
+
+#footer{
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Stack columns vertically */
+.footer-content{
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer-col{
+    width: 100%;
+}
+
+/* Center lists */
+.footer-col ul{
+    padding: 0;
+}
+
+.footer-col ul li{
+    margin-bottom: 8px;
+}
+
+/* Logo slightly smaller for phones */
+.footer-logo{
+    width: 110px;
+}
+
+.copyright{
+    margin-top: 30px;
+    font-size: 13px;
+}
+}
+  
+   @media (max-width: 768px){
+
+    #term{
+        padding: 30px 20px;   /* smaller padding for phone */
+        gap: 20px;
+    }
+
+    #term div{
+        padding: 18px;
+        border-radius: 6px;
+    }
+
+    #term h2{
+        font-size: 24px;   /* smaller title */
+    }
+
+    #term h4{
+        font-size: 18px;
+    }
+
+    #term p{
+        font-size: 14px;
+    }
+
+    #term li{
+        font-size: 14px;
+    }
+
+}
+    
+  
+}
+
+
+}
